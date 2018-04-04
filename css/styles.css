@@ -1,34 +1,85 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: arial;
+    font-weight: bolder;
+}
+
+body{
+    background-image: url(../images/cielo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
     text-align: center;
+    padding: 25px;
+    color: black;
+}
+
+li{
+    background-color: lightblue;
+    border-bottom: solid 1px white;
+    padding: 25px;
+    list-style: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .cabecera{
     width: 100%;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
-    width: 50%;
-    margin: 0px auto;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .izquierda{
-    width: 70%;
     padding: 25px;
 }
 
 .derecha{
-    width: 30%;
     padding: 25px;
 }
 
 #imagen{
     float: right;
+}
+
+#share{
+    position: fixed;
+    right: 20px;
+}
+
+#share img{
+    max-height: 50px;
+}
+
+#share-buttons{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-right: 0px;
+    right: 20px;
+    top: 80px;
+}
+
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
 }
