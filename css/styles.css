@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    text-align: center;
+}
+
+.cabecera{
+    width: 100%;
+}
+
+.container{
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.izquierda{
+    width: 70%;
+    padding: 25px;
+}
+
+.derecha{
+    width: 30%;
+    padding: 25px;
+}
+
+#imagen{
+    float: right;
+}
