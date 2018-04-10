@@ -23,11 +23,14 @@ function getLocation() {
         navigator.geolocation.getCurrentPosition(function (position) {
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
-            url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=a1368d1644fb7446515b0584bbe3c729&units=metric&lang=es`;
+            url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=a1368d1644fb7446515b0584bbe3c729&units=metric&lang=es`;
+            gettingJSON(url);
+        }, function (error) {
+            url = "https://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&appid=a1368d1644fb7446515b0584bbe3c729&units=metric";
             gettingJSON(url);
         });
     } else {
-        url = "http://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&appid=a1368d1644fb7446515b0584bbe3c729&units=metric";
+        url = "https://api.openweathermap.org/data/2.5/forecast?q=Madrid,es&appid=a1368d1644fb7446515b0584bbe3c729&units=metric";
         gettingJSON(url);
     }
 }
@@ -35,7 +38,7 @@ function getLocation() {
 function conexion(ciudad) {
     alert("Hola");
     var data = null;
-    var requestURL = "http://api.openweathermap.org/data/2.5/forecast?q="
+    var requestURL = "https://api.openweathermap.org/data/2.5/forecast?q="
             + ciudad + ",es&appid=a1368d1644fb7446515b0584bbe3c729";
     // 
     var request = new XMLHttpRequest();
